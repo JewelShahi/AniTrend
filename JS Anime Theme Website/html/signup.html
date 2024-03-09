@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an account</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/sign-up.css" />
+    <link rel="icon" href="/images/trenrx-logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo" onclick="window.location.href = '../index.html'">
+        <img
+          class="nav-image"
+          src="/images/trenrx-logo.png"
+          alt="trenrx-logo, anime website logo"
+        />
+        <h1>AniTrendRx</h1>
+      </div>
+      <ul class="nav-menu">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="/html/gallery.html">Gallery</a>
+        </li>
+        <li>
+          <a href="/html/blog.html">Blog</a>
+        </li>
+        <li>
+          <a href="/html/login.html">Log In</a>
+        </li>
+        <li class="sign-up">
+          <a href="/html/signup.html">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="content">
+          <h1 class="header">Create an account</h1>
+          <form action="" class="sign-form">
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              class="input"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="text"
+              name="address"
+              id="address"
+              class="input"
+              placeholder="Address"
+            />
+            <label>
+              <input type="radio" id="gender-male" name="gender" value="male" checked/>
+              <label for="gender-male" style="margin-right: 20px">Male</label>
+              <input
+                type="radio"
+                id="gender-female"
+                name="gender"
+                value="female"
+              />
+              <label for="gender-female">Female</label>
+            </label>
+
+            <label>
+              <label for="city" style="margin-right: 20px">City</label>
+              <select id="city" name="city-select">
+                <option value="tokyo">Tokyo</option>
+                <option value="sofia">Sofia</option>
+                <option value="london">London</option>
+                <option value="berlin">Berlin</option>
+                <option value="paris">Paris</option>
+              </select>
+            </label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="input"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="input"
+              placeholder="Password"
+              required
+            />
+            <input
+              type="submit"
+              name="submit"
+              id="submit"
+              class="button"
+              value="SignUp"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/signup.js"></script>
+  </body>
+</html>

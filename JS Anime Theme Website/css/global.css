@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@500&display=swap");
+
+/* scroll bar */
+
+
+/* all elements */
+* {
+  font-family: "Poppins", sans-serif;
+  background: rgb(41, 40, 40);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+
+/* html and body */
+html,
+body {
+  margin: 0;
+}
+
+/* nav logo (image) */
+.nav-image {
+  width: 80px;
+}
+
+/* the whole navbar */
+.navbar {
+  background: rgb(34, 33, 33);
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  top: 0;
+}
+
+/* the nav logo plus the nav text */
+.nav-logo {
+  height: 80px;
+  background: rgb(34, 33, 33);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-logo > * {
+  background: rgb(34, 33, 33);
+}
+
+/* nav logo text */
+.nav-logo > h1 {
+  font-family: "Kalam", cursive;
+  font-size: 40px;
+}
+
+/* navbar menu */
+.nav-menu {
+  background: rgb(34, 33, 33);
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 15px;
+  align-items: center;
+  margin: 0px;
+  padding-left: 0px;
+  transition: 300ms;
+}
+
+.nav-menu > li {
+  transition: 300ms;
+}
+
+.nav-menu > li > a:hover {
+  background: rgb(66, 66, 66);
+}
+
+.nav-menu > li > a {
+  text-decoration: none;
+  font-size: 20px;
+  background: rgb(51, 50, 50);
+  padding: 10px;
+  border-radius: 10px;
+  transition: 300ms;
+}
+
+.nav-menu > li > a:active,
+.nav-menu > li:active {
+  transform: scale(0.9);
+}
+
+/* signup button */
+.sign-up > a {
+  background-color: rgb(11, 95, 169) !important;
+  color: rgb(255, 255, 255);
+}
+
+.sign-up > a:hover {
+  background-color: rgb(40, 121, 192) !important;
+  color: rgb(255, 255, 255);
+}
+
+/* all inputs */
+.input {
+  max-width: 770px;
+  width: 100%;
+  padding: 15px;
+  padding-left: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+  transition: 300ms;
+  opacity: 1;
+}
+
+::placeholder {
+  color: rgb(248, 248, 248);
+  opacity: 0.5;
+}
+
+.input:hover {
+  background: rgb(30, 29, 29);
+  opacity: 1;
+}
+
+.input:focus {
+  opacity: 1;
+  border: 1px solid rgb(15, 123, 210);
+  box-shadow: 0 0 5px rgba(3, 183, 42, 0.7);
+}
+
+/* all buttons (type = submit) */
+.button {
+  max-width: 800px;
+  width: 105%;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  color: black;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid rgb(255, 255, 255);
+  outline: none;
+  transition: 400ms;
+}
+
+.button:hover {
+  background: rgb(39, 39, 39);
+  border: 1px solid rgb(119, 119, 119);
+  box-shadow: 0 0 5px rgba(175, 175, 175, 0.7);
+  color: white;
+}
+
+.button:active {
+  transform: scale(0.8);
+}
+
+/* go up button */
+#goUpBtn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 10px;
+  background-color: rgba(0, 123, 255, 0.7);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#goUpBtn i {
+  font-size: 24px;
+  color: white;
+  background-color: transparent;
+}
+
+#goUpBtn:hover {
+  background-color: rgba(48, 144, 247, 0.9);
+  transform: scale(1.1);
+}
+
+#goUpBtn:active {
+  transform: scale(0.9);
+}
+
+/* medium screen */
+@media screen and (max-width: 840px) {
+  .navbar {
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo > h1 {
+    font-size: 45px;
+  }
+  .nav-menu > li > a {
+    font-size: 18px;
+    padding: auto;
+  }
+}
+
+/* small screen */
+@media screen and (max-width: 405px) {
+  .navbar {
+    height: 350px;
+    gap: 0px;
+  }
+  .nav-logo > h1 {
+    font-size: 35px;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex: 2;
+  }
+  .nav-menu > li {
+    padding: 0;
+  }
+}
